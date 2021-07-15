@@ -5,11 +5,4 @@ class List < ApplicationRecord
   validates :name, uniqueness: true
   has_one_attached :photo
 
-
-  def get_movie_image
-    poster_path = @movies.poster_path
-    response = HTTP.get("https://image.tmdb.org/t/p/w500/#{poster_path}")
-    parsed_response = JSON.parse(response)
-    parsed_response["Image"]
-  end
 end

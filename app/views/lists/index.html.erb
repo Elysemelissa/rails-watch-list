@@ -3,15 +3,16 @@
 <div>
 <%@lists.each do |item| %>
 <ul>
-<li><div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+<div class="container">
+  <div class="row">
+<li><div class="card-category col-sm" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
   url('<%= cl_image_path item.photo.key, crop: :fill %>')">
   <%= link_to item.name, "lists/#{item.id}" %>
 </div></li>
 </ul>
+</div>
 <% end %>
+</div>
 </div>
 
 <%=link_to "Create new List", "/lists/new" %>
-<br>
-<%= cl_image_tag("reqqcjjwr84ee9rbnvek",
-      width: 400, height: 300, crop: :fill) %>
