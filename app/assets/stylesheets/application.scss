@@ -17,6 +17,7 @@ html,
 body {
   margin: 0;
   background: black;
+  color: white;
   font-family: "Montserrat", helvetica, arial, sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -59,4 +60,48 @@ a {
     text-decoration: none;
     color: white;
   }
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 900px;
+}
+header {
+  background: url("https://i.imgur.com/shPPhft.jpeg");
+  text-align: center;
+  width: 100%;
+  height: 350px;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  border-radius: 0 0 85% 85% / 30%;
+  h1 {
+    padding-top: 40px;
+  }
+}
+header .overlay {
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+  color: #fff;
+  text-shadow: 1px 1px 1px #333;
+  background-image: linear-gradient(135deg, #00000069 10%, #0000006b 100%);
+}
+
+h1 {
+  font-size: 80px;
+  margin-bottom: 30px;
+}
+
+h3,
+p {
+  margin-bottom: 30px;
+}
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
 }
