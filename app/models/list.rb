@@ -3,6 +3,7 @@ class List < ApplicationRecord
   has_many :movies, through: :bookmarks
   validates :name, presence: true
   validates :name, uniqueness: true
+  has_one_attached :photo
 
 
   def get_movie_image
