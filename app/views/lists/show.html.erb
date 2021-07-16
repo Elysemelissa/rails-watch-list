@@ -1,14 +1,27 @@
 <br>
-<h3><%= @list.name %></h3>
+<div class=movie-list-title>
+  <h2><%= @list.name %></h2>
+  <br>
+  <button type="button" class="btn btn-dark"><%=link_to "Add Bookmark", "/bookmarks/new" %></button>
+</div>
+<div class="list-date">
+  <p>Created on: <%= @list.created_at.strftime("%B %d, %Y") %></p>
+</div>
 
-<p>
-  Created on: <%= @list.created_at.strftime("%B %d, %Y") %>
-</p>
-
-<% @list.bookmarks.each do |bookmark| %>
-  <p><%= bookmark.comment %></p>
-  <p><%= bookmark.movie.title %></p>
-  <%= image_tag(bookmark.movie.poster_url)  %>
-<% end %>
-
-<%= link_to "Back to Lists", "/lists" %>
+<br>
+<div class="movie-container">
+  <% @list.bookmarks.each do |bookmark| %>
+    <div class="movie-card">
+      <%= image_tag(bookmark.movie.poster_url, width: 230 )  %>
+      <div class='movie-title'>
+      <h2><%= bookmark.movie.title %><h2>
+      </div>
+      <div class="list-name">
+      <h4><%= @list.name %></h4>
+      </div>
+      <div class='comment'>
+      <h4><%= bookmark.comment %></h4>
+      </div>
+    </div>
+  <% end %>
+</div>

@@ -1,26 +1,28 @@
-<header>
-	<div class="overlay">
-<h1>Elyse's Watchlist</h1>
-	<br>
-		</div>
-<div>
 <br>
 <br>
-<h2>The lists don't show up... I have no idea why 🧐</h2>
-<%@lists.each do |item| %>
-<ul>
-  <div class="row">
-    <div class="column">
-<li><div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
-  url('<%= cl_image_path item.photo.key, crop: :fill %>')">
-  <%= link_to item.name, "lists/#{item.id}" %>
-  </div></li>
-</div>
-</div>
-</ul>
-<% end %>
-</div>
+<div class=movie-list-title>
+  <h2>You have <%= @lists.count %> movie lists</h2>
+  <button type="button" class="btn btn-dark"><%=link_to "New List", "/lists/new" %></button>
 </div>
 
- <%# <%=link_to "Create new List", "/lists/new" %>
-<br>
+<div class = "card-container">
+  <%@lists.each do |item| %>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+      url('<%= cl_image_path item.photo.key %>')">
+      <%= link_to item.name, "lists/#{item.id}" %>
+    </div>
+  <% end %>
+</div>
+
+<div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="footer-copyright">
+    This footer is made with <i class="fas fa-heart"></i> at Le Wagon
+  </div>
+</div>
