@@ -16,14 +16,12 @@
 @import "pages/index";
 
 
-body {
+html, body {
   margin: 0;
   background: rgb(5, 5, 5);
   color: white;
   font-family: "Montserrat", helvetica, arial, sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  height: 900px;
+    height: 100%;
 }
 
 .movie-list-title {
@@ -126,6 +124,7 @@ header .overlay {
   padding: 0px 50px;
   color: rgba(238, 238, 238, 0.3);
 }
+
 .footer-links {
   display: flex;
   align-items: center;

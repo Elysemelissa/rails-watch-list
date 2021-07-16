@@ -2,7 +2,7 @@
 <div class=movie-list-title>
   <h2><%= @list.name %></h2>
   <br>
-  <button type="button" class="btn btn-dark"><%=link_to "Add Bookmark", "/bookmarks/new" %></button>
+  <button type="button" class="btn btn-dark"><%=link_to "Add Bookmark", "#{@list.id}/bookmarks/new" %></button>
 </div>
 <div class="list-date">
   <p>Created on: <%= @list.created_at.strftime("%B %d, %Y") %></p>
