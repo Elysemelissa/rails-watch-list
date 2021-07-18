@@ -1,3 +1,27 @@
 // Place all the styles related to the Bookmarks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.movie-title-text {
+  font-size: 25px;
+  padding: 9px;
+}
+
+.label {
+  background-color: rgb(36, 36, 36);
+  font-size: 17px;
+  border-radius: 5px;
+  display: inline-block;
+  text-align: center;
+}
+
+.list-name-text {
+  font-size: 18px;
+  margin: 9px;
+}
+
+.comment-text {
+  font-size: 16px;
+  padding-top: 10px;
+  line-height: normal;
+}

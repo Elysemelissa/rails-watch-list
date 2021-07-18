@@ -1,13 +1,14 @@
 <br>
 <h2>Add a new list</h2>
 <div class='form-group'>
-<%= simple_form_for (@list) do |f| %>
-<div class='form-input'>
-  <%= f.input :name, label: 'List title' %>
+  <%= simple_form_for (@list) do |f| %>
+  <div class='form-input'>
+    <%= f.input :name, label: 'List title' %>
   </div>
   <div class="photo-submit">
-  <%= f.input :photo, as: :file, label: 'Upload photo' %>
+    <%= f.input :photo, as: :file, label: 'Upload photo' %>
   </div>
-  <%= f.submit "Create list", class: "btn btn-dark" %>
-<% end %>
+    <%= f.submit "Create list", class: "btn btn-dark" %>
+  <% end %>
 </div>
+<br>

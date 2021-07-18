@@ -8,20 +8,19 @@
   <p>Created on: <%= @list.created_at.strftime("%B %d, %Y") %></p>
 </div>
 
-<br>
 <div class="movie-container">
-  <% @list.bookmarks.each do |bookmark| %>
-    <div class="movie-card">
-      <%= image_tag(bookmark.movie.poster_url, width: 230 )  %>
-      <div class='movie-title'>
-      <h2><%= bookmark.movie.title %><h2>
+<% @list.bookmarks.each do |bookmark| %>
+  <div class="movie-card">
+    <%= image_tag(bookmark.movie.poster_url, width: 200, class: 'movie-image' ) %>
+      <div class="movie-card-items">
+        <h2 class="movie-title-text"><%= bookmark.movie.title %><h2>
+        <div class="label">
+          <h2 class="list-name-text"><%= @list.name %></h2>
+        </div>
+        <h4 class="comment-text"><%= bookmark.comment %></h4>
       </div>
-      <div class="list-name">
-      <h4><%= @list.name %></h4>
-      </div>
-      <div class='comment'>
-      <h4><%= bookmark.comment %></h4>
-      </div>
-    </div>
-  <% end %>
+  </div>
+ <% end %>
 </div>
+<br>
+<br>

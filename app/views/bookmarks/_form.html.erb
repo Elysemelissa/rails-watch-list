@@ -1,5 +1,10 @@
 <%= simple_form_for [@list, @bookmark] do |f| %>
-  <%= f.input :comment %>
-  <%= f.association :movie %>
-  <%= f.button :submit %>
-<% end %>
+<div class='form-group'>
+  <div class='form-input'>
+    <%= f.input :comment %>
+    <%= f.association :movie %>
+    <%= f.button :submit, class: "btn btn-dark" %>
+  <% end %>
+  </div>
+</div>
+<br>
