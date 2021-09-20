@@ -1,8 +1,8 @@
-# Movie List
-The Movie List was a project from Le Wagon to practice CRUD, front-end and Heroku deployment with Rails. 
+# Watchlist
+The Watchlist was a project from Le Wagon to practice CRUD, front-end and Heroku deployment with Rails. 
 
 <h3>Functionality</h3>
-The web-app allows you to create lists, upload a background image for the list card, and add movies (from a seed) to the list. 
+The web-app allows you to create lists, upload a background image for the list card, and add movies (from a seed) to the list. <br>
 The app uses the TMDB API for the movie posters.
 
 <h3><a href="https://elyses-movielist.herokuapp.com/">Visit project</a></h3>
